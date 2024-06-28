@@ -2,7 +2,7 @@ import subprocess
 from config import *
 
 
-class backuper:
+class Backuper:
     def __init__(self, user, password, host, port):
         self.__user = user
         self.__password = password

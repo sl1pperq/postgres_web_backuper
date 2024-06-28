@@ -1,6 +1,7 @@
 config.py
 .idea
 venv
+.venv
 backupdata.sqlite3
 migrations
 instance
