@@ -11,5 +11,5 @@ DEBUG = False
 
 ZIP_PASSWORD = ""
 
-TP_login = ''
-TP_password = ''
+TP_login = 'b'
+TP_password = 'n'

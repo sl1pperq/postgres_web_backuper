@@ -10,4 +10,3 @@ with app.app_context():
     while True:
         sch.run_pending()
         time.sleep(3600)
-

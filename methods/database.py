@@ -6,7 +6,7 @@ from models import *
 def get_schemas():
     result = []
     try:
-        conn = psycopg2.connect(host=PG_HOST, port=PG_PORT, user=PG_USER, password=PG_PASSWORD)
+        conn = psycopg2.connect(dbname="", host=PG_HOST, port=PG_PORT, user=PG_USER, password=PG_PASSWORD)
         cursor = conn.cursor()
         cursor.execute("SELECT datname FROM pg_database")
         databases = cursor.fetchall()
@@ -17,9 +17,10 @@ def get_schemas():
         print("Ошибка при работе с базой данных:", error)
         return []
 
-
+    print("TESTORIA", f"DATABASES: {databases}")
     for database in databases:
         try:
+            print("TESTORIA", f"WILL CONNECT to {database[0]}")
             conn = psycopg2.connect(host=PG_HOST, port=PG_PORT, user=PG_USER, password=PG_PASSWORD,
                                     database=database[0])
 
