@@ -9,7 +9,7 @@ class Backuper:
         self.__host = host
         self.__port = port
 
-    def apply(self, target):
+    def db_apply(self, target):
         db, schema = target
         filename = f"{db}_{schema}.sql"
         local_file_path = '{}{}'.format("backups/", filename)

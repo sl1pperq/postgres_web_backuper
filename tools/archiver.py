@@ -14,3 +14,9 @@ class Archiver:
         remove(filename)
 
         return outfile
+
+    def db_apply(self, filename):
+        return self.apply(filename)
+
+    def file_apply(self, filename):
+        return self.apply(filename)
